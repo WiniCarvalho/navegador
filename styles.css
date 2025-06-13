@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Roboto+Mono&display=swap');
+
+body {
+    background: linear-gradient(135deg, #1e1e2f 0%, #12121b 100%);
+    color: #4285F4;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Roboto Mono', monospace;
+    align-items: center;
+    justify-content: flex-start;
+    overflow-x: hidden;
+}
+
+
+.navbar {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(18, 18, 27, 0.75);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    padding: 12px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    z-index: 100;
+}
+
+
+.navbar button {
+    padding: 10px 14px;
+    background: transparent;
+    border: 2px solid #4285F4;
+    border-radius: 12px;
+    color: #4285F4;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar button i {
+    pointer-events: none;
+}
+
+.navbar button:hover {
+    background: #4285F4;
+    color: #12121b;
+    box-shadow: 0 0 8px #4285F4;
+}
+
+
+.navbar input#url {
+    width: 350px;
+    padding: 12px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 40px;
+    outline: none;
+    background: rgba(255,255,255,0.1);
+    color: #eee;
+    font-weight: 500;
+    box-shadow: inset 0 0 8px rgba(66,133,244,0.5);
+    transition: background 0.3s ease;
+}
+
+.navbar input#url::placeholder {
+    font-style: italic;
+    color: #bbb;
+}
+
+.navbar input#url:focus {
+    background: rgba(66,133,244,0.15);
+}
+
+
+.navbar button:last-child {
+    border-color: #34A853;
+    color: #34A853;
+}
+
+.navbar button:last-child:hover {
+    background: #34A853;
+    color: #12121b;
+    box-shadow: 0 0 12px #34A853;
+}
+
+
+.container {
+    margin-top: 100px;
+    text-align: center;
+    color: #eee;
+    width: 90%;
+    max-width: 600px;
+    padding: 40px 20px;
+    background: rgba(18, 18, 27, 0.6);
+    border-radius: 24px;
+    box-shadow: 0 8px 30px rgba(66,133,244,0.4);
+    backdrop-filter: blur(12px);
+}
+
+
+.logo h1 {
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 700;
+    font-size: 5rem;
+    margin: 0;
+    user-select: none;
+    display: flex;
+    justify-content: center;
+    gap: 0.2em;
+}
+
+
+
+.logo .w {
+    color: #4285F4;
+    
+}
+
+.logo .i {
+    color: #34A853;
+    
+}
+
+.logo .n {
+    color: #FBBC05;
+    
+}
+
+
+.logo span:hover {
+    animation: pulseGlow 1.5s infinite ease-in-out;
+    cursor: default;
+}
+
+
+.barra-de-pesquisa {
+    margin-top: 30px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+    width: 100%;
+    max-width: 480px;
+}
+
+.barra-de-pesquisa input#pesquisa {
+    flex-grow: 1;
+    padding: 14px 20px;
+    font-size: 18px;
+    border-radius: 40px;
+    border: none;
+    outline: none;
+    background: rgba(255,255,255,0.15);
+    color: #eee;
+    box-shadow: inset 0 0 10px rgba(255,255,255,0.3);
+    transition: background 0.3s ease;
+}
+
+.barra-de-pesquisa input#pesquisa::placeholder {
+    color: #ddd;
+    font-style: italic;
+}
+
+.barra-de-pesquisa input#pesquisa:focus {
+    background: rgba(255,255,255,0.25);
+}
+
+
+.barra-de-pesquisa button {
+    background: #4285F4;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 50%;
+    cursor: pointer;
+    color: white;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: box-shadow 0.3s ease;
+    box-shadow: 0 0 8px #4285F4;
+}
+
+.barra-de-pesquisa button:hover {
+    box-shadow: 0 0 14px #357ae8;
+    background: #357ae8;
+}
+
+
+.barra-de-pesquisa button i {
+    pointer-events: none;
+}
+
+
+@media (max-width: 600px) {
+    .navbar input#url {
+        width: 180px;
+        font-size: 14px;
+        padding: 10px 15px;
+    }
+
+    .barra-de-pesquisa {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .barra-de-pesquisa input#pesquisa {
+        font-size: 16px;
+        padding: 12px 15px;
+    }
+
+    .barra-de-pesquisa button {
+        padding: 10px 16px;
+        font-size: 16px;
+    }
+
+    .logo h1 {
+        font-size: 3.5rem;
+    }
+}

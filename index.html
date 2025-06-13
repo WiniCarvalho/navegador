@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    
+    <nav class="navbar">
+        <button onclick="voltar()"><i class="fas fa-arrow-left"></i></button>
+        <button onclick="avancar()"><i class="fas fa-arrow-right"></i></button>
+        <button onclick="recarregar()"><i class="fas fa-sync"></i></button>
+        <input type="text" id="url" placeholder="Pesquise ou introduza uma URL">
+        <button onclick="irParaUrl()">Ir</button>
+    </nav>
+    <div class="container">
+        <div class="logo">
+            <h1>
+                <span class="w">W</span>
+                <span class="i">I</span>
+                <span class="n">N</span>
+                
+            </h1>
+        </div>
+        <div class="barra-de-pesquisa">
+            <input type="text" id="pesquisa" placeholder="Pesquisar...">
+            <button onclick="pesquisar()"><i class="fas fa-search"></i></button>
+        </div>
+    </div>
+    
+    <script src="scripts.js"></script>
+    <link rel="stylesheet" href="styles.css">
+
+</body>
+</html>
