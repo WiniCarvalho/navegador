@@ -39,4 +39,10 @@ document.getElementById('pesquisa').addEventListener('keydown', function(event) 
     }
 });
 
+document.getElementById('url').addEventListener('keydown', function(event) {
+    if (event.key === 'Enter') {
+        event.preventDefault();
+        irParaUrl();
+    }
+});
 
