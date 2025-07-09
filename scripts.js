@@ -32,4 +32,11 @@ function avancar() {
 function recarregar() {
     window.location.reload();
 }
+document.getElementById('pesquisa').addEventListener('keydown', function(event) {
+    if (event.key === 'Enter') {
+        event.preventDefault(); // impede envio automático de formulário, se existir
+        pesquisar();
+    }
+});
+
 
